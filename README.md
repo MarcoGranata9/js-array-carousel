@@ -15,5 +15,10 @@ Aggiungere il **ciclo infinito** del carosello. Ovvero se è attiva la prima imm
 1. Creare un Array con le immagini
 
 **Logica**
-1. 
+1. Creare un ciclo for che legga le immagini nell' array
+2. Far stampare al ciclo le stringhe con le immagini in pagina
+3. Creare l' array di stringhe con immagini
+4. Creare una variabile che rappresenta la classe active
+5. Al click della freccia sopra passare all' immagine successiva
+6. Al click della freccia sotto passare all' immagine precedente
 
