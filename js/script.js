@@ -2,9 +2,7 @@ const imgArray = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/0
 console.log(imgArray);
 const carousel = document.querySelector(".items");
 console.log(carousel);
-const prevBtn = document.querySelector(".prev")
-const nextBtn = document.querySelector(".next")
-console.log(nextBtn, prevBtn);
+
 
 let carouselString = "";
 
@@ -18,21 +16,37 @@ for (let i = 0; i < imgArray.length; i++) {
 
 carousel.innerHTML += carouselString
 
+
+
+// Stato iniziale
 const carouselStringArray = document.querySelectorAll(".item")
 console.log(carouselStringArray);
+const prevBtn = document.querySelector(".prev")
+const nextBtn = document.querySelector(".next")
 
 let currentActive = 0
 
 carouselStringArray[currentActive].classList.add("active")
-console.log(currentActive)
+console.log(currentActive)  
 
+// Bottoni
 nextBtn.addEventListener("click", function(){
-    currentActive++
+    if (currentActive < carouselStringArray.length - 1) {
+        carouselStringArray[currentActive].classList.remove("active")
+        currentActive++
+        carouselStringArray[currentActive].classList.add("active")
+    }
 })
 
 prevBtn.addEventListener("click", function(){
-    currentActive--
+    if (currentActive > 0) {
+        carouselStringArray[currentActive].classList.remove("active")
+        currentActive--
+        carouselStringArray[currentActive].classList.add("active")
+    }
 })
+
+
   
 
 
