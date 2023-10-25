@@ -30,21 +30,36 @@ carouselStringArray[currentActive].classList.add("active")
 console.log(currentActive)  
 
 // Bottoni
+
+
 nextBtn.addEventListener("click", function(){
+    carouselStringArray[currentActive].classList.remove("active")
     if (currentActive < carouselStringArray.length - 1) {
-        carouselStringArray[currentActive].classList.remove("active")
+
         currentActive++
-        carouselStringArray[currentActive].classList.add("active")
+
+    } else {
+
+        currentActive = 0
+
     }
+    carouselStringArray[currentActive].classList.add("active")
 })
 
 prevBtn.addEventListener("click", function(){
+    carouselStringArray[currentActive].classList.remove("active")
     if (currentActive > 0) {
-        carouselStringArray[currentActive].classList.remove("active")
+        
         currentActive--
-        carouselStringArray[currentActive].classList.add("active")
+        
+    } else {
+        
+        currentActive = carouselStringArray.length - 1
+        
     }
+    carouselStringArray[currentActive].classList.add("active")
 })
+
 
 
   
